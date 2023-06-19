@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.31",
+        "modules": false,
+        "debug": true
+      }
+    ]
+  ],
+  "plugins": [
+    [ 
+      "@babel/plugin-transform-runtime",
+      {
+        // https://babeljs.io/docs/en/babel-plugin-transform-runtime#corejs
+        "corejs": 3,
+        "proposals": true
+      }
+    ],
+    ["polyfill-corejs3", { "method": "usage-global", "version": "3.20" }]
+  ]
+}
